@@ -1,0 +1,312 @@
+/* ===== PROFILE PAGE ===== */
+
+.profile-page{
+
+  min-height:90vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:40px 20px;
+
+  background:linear-gradient(135deg,#020617,#0f172a,#020617);
+  background-size:300% 300%;
+
+  animation:bgMove 10s infinite linear;
+
+}
+
+/* BACKGROUND ANIMATION */
+
+@keyframes bgMove{
+
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+
+}
+
+/* ===== PROFILE CARD ===== */
+
+.profile-card{
+
+  width:460px;
+
+  background:rgba(255,255,255,0.04);
+
+  backdrop-filter:blur(14px);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  border-radius:18px;
+
+  padding:35px;
+
+  box-shadow:0 25px 60px rgba(0,0,0,0.6);
+
+  animation:fadeUp 0.8s ease;
+
+}
+
+/* ENTRY ANIMATION */
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+/* ===== HEADER ===== */
+
+.profile-header{
+
+  text-align:center;
+
+  margin-bottom:30px;
+
+}
+
+.profile-header h2{
+
+  font-size:28px;
+
+  background:linear-gradient(90deg,#38bdf8,#22c55e);
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+}
+
+.profile-header p{
+
+  color:#94a3b8;
+
+  font-size:14px;
+
+  margin-top:8px;
+
+  line-height:1.5;
+
+}
+
+/* ===== STATS ===== */
+
+.profile-stats{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  margin-bottom:30px;
+
+}
+
+.profile-stats div{
+
+  flex:1;
+
+  background:#020617;
+
+  border:1px solid #1e293b;
+
+  border-radius:10px;
+
+  padding:15px;
+
+  text-align:center;
+
+  margin:0 5px;
+
+  transition:0.35s;
+
+  cursor:pointer;
+
+}
+
+.profile-stats div:hover{
+
+  transform:translateY(-6px) scale(1.05);
+
+  box-shadow:0 15px 30px rgba(56,189,248,0.3);
+
+}
+
+.profile-stats h3{
+
+  font-size:22px;
+
+  color:#38bdf8;
+
+}
+
+.profile-stats span{
+
+  font-size:13px;
+
+  color:#94a3b8;
+
+}
+
+/* ===== PROFILE SECTIONS ===== */
+
+.profile-section{
+
+  margin-bottom:22px;
+
+  padding-bottom:12px;
+
+  border-bottom:1px solid #1e293b;
+
+}
+
+.profile-section:last-child{
+  border-bottom:none;
+}
+
+/* SECTION TITLE */
+
+.profile-section h3{
+
+  font-size:18px;
+
+  margin-bottom:10px;
+
+  color:#38bdf8;
+
+}
+
+/* INFO TEXT */
+
+.profile-section p{
+
+  font-size:14px;
+
+  color:#cbd5e1;
+
+  margin:5px 0;
+
+}
+
+/* ===== LOGOUT BUTTON ===== */
+
+.logout-btn{
+
+  width:100%;
+
+  margin-top:20px;
+
+  padding:13px;
+
+  border:none;
+
+  border-radius:40px;
+
+  font-size:15px;
+
+  font-weight:600;
+
+  background:linear-gradient(135deg,#ef4444,#dc2626);
+
+  color:white;
+
+  cursor:pointer;
+
+  transition:0.35s;
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+/* HOVER */
+
+.logout-btn:hover{
+
+  transform:translateY(-4px) scale(1.05);
+
+  box-shadow:0 15px 35px rgba(239,68,68,0.5);
+
+}
+
+/* CLICK */
+
+.logout-btn:active{
+
+  transform:scale(0.96);
+
+}
+
+/* SHINE EFFECT */
+
+.logout-btn::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:-100%;
+
+  width:100%;
+  height:100%;
+
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+
+  transition:0.6s;
+
+}
+
+.logout-btn:hover::before{
+  left:100%;
+}
+
+/* ===== EMPTY LOGIN MESSAGE ===== */
+
+.profile-empty{
+
+  min-height:80vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:22px;
+
+  color:#94a3b8;
+
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:500px){
+
+  .profile-card{
+    width:100%;
+    padding:25px;
+  }
+
+  .profile-stats{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .profile-stats div{
+    margin:0;
+  }
+
+}

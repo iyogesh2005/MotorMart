@@ -1,0 +1,219 @@
+/* PAGE BACKGROUND */
+
+.login-page{
+
+  min-height:90vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:linear-gradient(
+    135deg,
+    #020617,
+    #0f172a,
+    #020617
+  );
+
+  background-size:300% 300%;
+  animation:bgMove 8s infinite linear;
+
+  padding:40px;
+
+}
+
+/* BACKGROUND ANIMATION */
+
+@keyframes bgMove{
+
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+
+}
+
+/* CARD */
+
+.login-card{
+
+  width:900px;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  backdrop-filter:blur(20px);
+
+  background:rgba(255,255,255,0.05);
+
+  border:1px solid rgba(255,255,255,0.1);
+
+  border-radius:16px;
+
+  padding:40px;
+
+  gap:40px;
+
+  animation:fadeUp 0.8s ease;
+
+}
+
+/* LEFT CONTENT */
+
+.login-left{
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+}
+
+.login-left h1{
+
+  font-size:36px;
+
+  background:linear-gradient(90deg,#38bdf8,#22c55e);
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  margin-bottom:10px;
+
+}
+
+.login-left p{
+
+  color:#cbd5e1;
+
+  line-height:1.6;
+
+}
+
+/* FEATURES */
+
+.login-features{
+
+  margin-top:20px;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:10px;
+
+  color:#94a3b8;
+
+}
+
+/* FORM */
+
+.login-form{
+
+  display:flex;
+  flex-direction:column;
+
+  gap:14px;
+
+}
+
+.login-form h2{
+
+  text-align:center;
+
+  color:white;
+
+}
+
+/* INPUT */
+
+.login-form input,
+.login-form select{
+
+  padding:12px;
+
+  border-radius:8px;
+
+  border:1px solid #1e293b;
+
+  background:#020617;
+
+  color:white;
+
+  outline:none;
+
+  transition:0.3s;
+
+}
+
+/* INPUT FOCUS */
+
+.login-form input:focus,
+.login-form select:focus{
+
+  border-color:#38bdf8;
+
+  box-shadow:0 0 10px rgba(56,189,248,0.6);
+
+}
+
+/* BUTTON */
+
+.login-btn{
+
+  margin-top:10px;
+
+  padding:12px;
+
+  border:none;
+
+  border-radius:40px;
+
+  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+
+  color:white;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+}
+
+/* BUTTON HOVER */
+
+.login-btn:hover{
+
+  transform:translateY(-4px) scale(1.05);
+
+  box-shadow:0 15px 35px rgba(56,189,248,0.4);
+
+}
+
+/* ENTRY ANIMATION */
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(50px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+  .login-card{
+
+    grid-template-columns:1fr;
+
+    width:100%;
+
+  }
+
+}
